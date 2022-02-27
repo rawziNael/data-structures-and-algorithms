@@ -1,10 +1,10 @@
-#array-insert-shift
+# array-insert-shift
 In this challenge, we should add an element to an array in the middle of it.
 
-#Whiteboard 
+# Whiteboard 
 ![whiteboard](array-insert-Shift.png)
 
-#Approach & Efficiency
+# Approach & Efficiency
 - create a new empty array for output
 - find out the midpoint index by dividing the length and rounding up for arrays with an odd length
 - All items before the midpoint can stay in place
