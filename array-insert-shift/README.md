@@ -1,4 +1,4 @@
-# array-insert-shift
+# Array-insert-shift
 In this challenge, we should add an element to an array in the middle of it.
 
 # Whiteboard 
