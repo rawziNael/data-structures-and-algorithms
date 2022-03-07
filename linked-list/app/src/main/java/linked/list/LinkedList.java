@@ -3,7 +3,6 @@ package linked.list;
 public class LinkedList {
 
         public Node head;
-
         public LinkedList() {
 
         };
@@ -16,16 +15,17 @@ public class LinkedList {
 
    public boolean includes(int target) {
             Node runner = head;
-
+     
             while (runner != null) {
-                if (runner.value == target) {
-                    return true;
-                } else {
-                    runner = runner.next;
-                }
+            if (runner.value == target) {
+                return true;
+            } else {
+                runner = runner.next;
             }
-            return false;
-    }
+         }
+       return false;
+     
+   }
 
     public String toString() {
             String str = "";
@@ -66,5 +66,6 @@ public class LinkedList {
         }
         newNode.next = runner.next;
         runner.next = newNode;
-    }
+
+        }
 }

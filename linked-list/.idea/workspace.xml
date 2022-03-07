@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/linked/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/linked/list/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/linked/list/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/linked/list/Node.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/app/src/test/java/linked/list/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linked/list/LinkedListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
