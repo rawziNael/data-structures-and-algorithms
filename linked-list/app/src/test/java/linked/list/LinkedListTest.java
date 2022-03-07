@@ -25,11 +25,34 @@ public class LinkedListTest {
         assertTrue(second.includes(6));
     }
     @Test public void testAppendLinkedList() {
-        LinkedList third = new LinkedList();
-        third.insert(100);
-        third.insert(99);
+        LinkedList ap = new LinkedList();
+        ap.insert(100);
+        ap.insert(99);
+        ap.append(50);
 
         String output = "{99} -> {100} -> {50} -> NULL";
-        assertEquals(output, third.toString());
+        assertEquals(output, ap.toString());
+    }
+
+
+    @Test public void testInsertBeforeLinkedList() {
+        LinkedList before = new LinkedList();
+        before.insert(100);
+        before.insert(98);
+        before.insert(96);
+        before.insertBefore(99, 50);
+
+        String output = "{96} -> {97} -> {98} -> {50} -> {99} -> {100} -> NULL";
+        assertEquals(output, before.toString());
+    }
+
+    @Test public void testInsertAfterLinkedList() {
+        LinkedList after = new LinkedList();
+        after.insert(99);
+        after.insert(97);
+        after.insertAfter(97, 50);
+
+        String output = "{96} -> {97} -> {50} -> {98} -> {99} -> {100} -> NULL";
+        assertEquals(output, after.toString());
     }
 }
