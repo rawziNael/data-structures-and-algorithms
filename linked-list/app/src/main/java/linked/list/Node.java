@@ -1,11 +1,11 @@
 package linked.list;
 
-    public class Node<T> {
+        class Node {
+            public Node next;
+            public int value;
 
-        T value ;
-        Node nextValue ;
-
-        public Node (T value){
-            this.value = value;
-        }
+            public Node(int val) {
+                this.value = val;
+                this.next = null;
+            }
 }
