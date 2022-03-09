@@ -1,6 +1,7 @@
 package linked.list;
 
         class Node {
+
             public Node next;
             public int value;
 
@@ -8,4 +9,5 @@ package linked.list;
                 this.value = val;
                 this.next = null;
             }
-}
+    }
+

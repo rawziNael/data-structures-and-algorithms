@@ -7,3 +7,4 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge02 | array-insert-shift | [shift](https://github.com/rawziNael/data-structures-and-algorithms/tree/main/array-insert-shift)|
 | Challenge03 | array-binary-search | [binary](https://github.com/rawziNael/data-structures-and-algorithms/tree/main/array-binary-search)|
 | Challenge05 | LinkedList | [Linked](https://github.com/rawziNael/data-structures-and-algorithms/tree/main/linked-list)|
+| Challenge06 | LinkedList-Inseration | [inseration](https://github.com/rawziNael/data-structures-and-algorithms/tree/linked-list-insertions/linked-list/app)|
