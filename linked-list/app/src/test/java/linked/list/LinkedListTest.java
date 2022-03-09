@@ -55,4 +55,22 @@ public class LinkedListTest {
         String output = "{96} -> {97} -> {50} -> {98} -> {99} -> {100} -> NULL";
         assertEquals(output, after.toString());
     }
+
+    // Code Challenge: Class 07 - (k-th value from the end of a linked list).
+    @Test
+    public void testGetKFromEnd() {
+        LinkedList tail = new LinkedList();
+        tail.insert(8);
+        tail.insert(11);
+        tail.insert(6);
+        tail.insert(18);
+        tail.insert(23);
+
+        assertEquals(6, tail.getKValue(2));
+        assertEquals(23, tail.getKValue(4));
+        assertEquals( 8, tail.getKValue(0));
+        assertEquals(-1, tail.getKValue(20));
+
+
+    }
 }
