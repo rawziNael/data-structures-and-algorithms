@@ -2,14 +2,16 @@ package linked.list;
 
 public class LinkedList {
         public Node head;
+
         public LinkedList() {
 
-        };
+        }
+
    // Code Challenge: Class 05: Linked List Implementation
    public void insert(int val) {
-            Node newNode = new Node(val);
-            newNode.next = head;
-            head = newNode;
+            Node node = new Node(val);
+            node.next = head;
+            head = node;
    }
 
    public boolean includes(int target) {

@@ -1,29 +1,43 @@
 package linked.list;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
-    @Test public void testInstantiateLinkedList() {
+
+    // Code Challenge: Class 05 - Linked List Implementation
+    @Test void  testInstantiateAnEmptyLinkedList(){
+        LinkedList linkedList = new LinkedList();
+    }
+    @Test public void testInsertLinkedList() {
         LinkedList first = new LinkedList();
         first.insert(100);
         first.insert(99);
         first.insert(98);
-        first.insert(97);
-        first.insert(96);
-        first.insert(95);
-        first.insert(94);
+        assertEquals(100, first.head.next.next.value);
 
-        assertTrue(first.includes(100));
-        assertFalse(first.includes(92));
     }
-    @Test public void testIncludes() {
+    @Test public void testIncludesExists() {
         LinkedList second = new LinkedList();
         second.insert(9);
         second.insert(7);
         second.insert(5);
 
-        assertTrue(second.includes(6));
+        assertTrue(second.includes(7));
     }
+
+    @Test public void testIncludesNotExists() {
+        LinkedList third = new LinkedList();
+        third.insert(9);
+        third.insert(7);
+        third.insert(5);
+
+        assertFalse(third.includes(10));
+    }
+
+    //Code Challenge: Class 06- Extend a Linked List to allow various insertion methods.
     @Test public void testAppendLinkedList() {
         LinkedList ap = new LinkedList();
         ap.insert(100);
