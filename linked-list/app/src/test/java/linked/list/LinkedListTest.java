@@ -84,7 +84,25 @@ public class LinkedListTest {
         assertEquals(23, tail.getKValue(4));
         assertEquals( 8, tail.getKValue(0));
         assertEquals(-1, tail.getKValue(20));
+    }
 
+    //Code Challenge: Class 08 - Zip two linked lists.
+
+    @Test
+    public void testZipList() {
+        LinkedList fLL = new LinkedList();
+        LinkedList sLL = new LinkedList();
+
+        // Testing when the arguments are equal in length
+        fLL.insert(5);
+        fLL.insert(3);
+        fLL.insert(1);
+        sLL.insert(6);
+        sLL.insert(4);
+        sLL.insert(2);
+        Node actual = LinkedList.zipLinkedList(fLL, sLL);
+
+        assertEquals("Should be null", actual);
 
     }
 }

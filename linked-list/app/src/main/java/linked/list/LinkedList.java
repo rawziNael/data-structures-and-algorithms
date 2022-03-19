@@ -5,9 +5,12 @@ public class LinkedList {
 
         public LinkedList() {
 
+
         }
 
+
    // Code Challenge: Class 05: Linked List Implementation
+
    public void insert(int val) {
             Node node = new Node(val);
             node.next = head;
@@ -93,4 +96,35 @@ public class LinkedList {
         return -1;
     }
 
+    //Code Challenge: Class 08 - Zip two linked lists.
+
+    public static Node zipLinkedList(LinkedList first, LinkedList second) {
+        if (first.head == null) {
+            return second.head;
+        } else if (second.head == null) {
+            return first.head;
+        }
+
+        Node current = first.head;
+        Node tempOne = current.next;
+        Node tempTwo = second.head.next;
+
+        while (current != null) {
+            if (current.next == null && second.head != null) {
+                current.next = second.head;
+                return first.head;
+            }
+            current.next = second.head;
+            second.head.next = tempOne;
+            if (tempTwo == null) {
+                return first.head;
+            }
+            second.head = tempTwo;
+            current = tempOne;
+            tempOne = current.next;
+            tempTwo = second.head.next;
+        }
+        return first.head;
+    }
 }
+
