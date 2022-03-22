@@ -2,10 +2,10 @@ package stack_queue;
 
 public class Stack<T> {
 
-    private Node<T> top;
+    Node<T> top;
 
-    public Stack(Node<T> top) {
-        this.top = top;
+    public Stack() {
+        this.top = null;
     }
 
     // Adds a new node
@@ -14,7 +14,7 @@ public class Stack<T> {
         this.top = node;
     }
 
-    // Removes the node from the top of the stack
+    // Remove the node from the top of the stack
     public T pop() {
         T value = this.top.value;
         this.top = this.top.next;
@@ -25,9 +25,9 @@ public class Stack<T> {
     public String peek ()
     {
         if(!this.isEmpty())
-            return this.top.toString();
+            return this.top.value.toString();
         else
-            return "The stack is empty";
+            return "Your stack is empty";
     }
 
     public boolean isEmpty(){
