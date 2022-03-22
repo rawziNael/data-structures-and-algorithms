@@ -2,12 +2,12 @@ package stack_queue;
 
 public class Queue<T> {
 
-    private Node<T> front;
-    private Node<T> back;
+    Node<T> front;
+    Node<T> back;
 
-    public Queue(Node<T> front, Node<T> back) {
-        this.front = front;
-        this.back = back;
+    public Queue() {
+        this.front = null;
+        this.back = null;
     }
 
     // Add a new node
@@ -44,7 +44,7 @@ public class Queue<T> {
     }
 
     public boolean isEmpty(){
-        return this.front==null;
+        return this.front == null;
     }
 
     @Override
