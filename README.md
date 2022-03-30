@@ -14,5 +14,5 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge10 | | |
 | Challenge11 | | |
 | Challenge12 | | |
-| Challenge13 | | [Brackets](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Multi-bracket%20Validation.md)|
+| Challenge13 |Multi-bracket Validation | [Brackets](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Multi-bracket%20Validation.md)|
 
