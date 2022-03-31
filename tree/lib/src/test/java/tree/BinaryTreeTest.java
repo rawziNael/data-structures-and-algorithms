@@ -25,13 +25,13 @@ public class BinaryTreeTest{
         BinaryTree binaryTree = new BinaryTree();
         assertTrue(binaryTree.inOrder() != null);
 
-        binaryTree.root = new Node(21);
-        binaryTree.root.left = new Node(62);
-        binaryTree.root.right = new Node(4);
-        binaryTree.root.left.right = new Node(5);
-        binaryTree.root.left.right.right = new Node(987654321);
-        binaryTree.root.right.left = new Node(0);
-        binaryTree.root.right.right = new Node(-8);
+        binaryTree.root = new Node('A');
+        binaryTree.root.left = new Node('B');
+        binaryTree.root.right = new Node('C');
+        binaryTree.root.left.right = new Node('D');
+        binaryTree.root.left.right.right = new Node('E');
+        binaryTree.root.right.left = new Node('F');
+        binaryTree.root.right.right = new Node('G');
     }
 
     @Test
@@ -39,10 +39,10 @@ public class BinaryTreeTest{
         BinaryTree binaryTree = new BinaryTree();
         assertTrue(binaryTree.postOrder() != null);
 
-        binaryTree.root = new Node(-21, null, null);
-        binaryTree.root.left = new Node(99, null, null);
-        binaryTree.root.right = new Node(496, null, null);
-        binaryTree.root.right.left = new Node(32, null, null);
-        binaryTree.root.right.right = new Node(3, null, null);
+        binaryTree.root = new Node(15);
+        binaryTree.root.left = new Node(24);
+        binaryTree.root.right = new Node(6);
+        binaryTree.root.right.left = new Node(5);
+        binaryTree.root.right.right = new Node(3);
     }
 }
