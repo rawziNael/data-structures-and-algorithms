@@ -15,5 +15,5 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge11 | | |
 | Challenge12 | | |
 | Challenge13 |Multi-bracket Validation | [Brackets](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Multi-bracket%20Validation.md)|
-| Challenge14 |Binary Tree and BST | [Tree](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Multi-bracket%20Validation.md)|
+| Challenge14 |Binary Tree and BST | [Tree](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/tree/Tree.md)|
 
