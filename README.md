@@ -11,7 +11,7 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge07 | LinkedList-k-th| [k-th](https://github.com/rawziNael/data-structures-and-algorithms/tree/linked-list-kth/linked-list/app/src)|
 | Challenge08 | | |
 | Challenge09 | | |
-| Challenge10 | | |
+| Challenge10 | Stack and a Queue|[Stack_Queu](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Read10.md)|
 | Challenge11 | | |
 | Challenge12 | | |
 | Challenge13 |Multi-bracket Validation | [Brackets](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/stack_queue/Multi-bracket%20Validation.md)|
