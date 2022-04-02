@@ -18,3 +18,16 @@ Learning 2 new data structures: stacks and queues.
 
 # Approach & Efficiency
 Per the instructions I took the approaches that use O(1) Time, reassigning the nodes to what their next property should be instead of looping.  
+
+# API  
+Stacks methods:  
+- Push() : it pushes the new node to the beginning of the stack.  
+- Pop() : it removes the first node of the stack.  
+- Peek() : it returns the value of the first element in the stack.  
+- IsEmpty() : it returns a boolean telling us if the stack is empty or not.
+
+Queues methods:
+- Enqueue() : it pushes the new node to the end of the queue.  
+- Dequeue() : it removes the first node of the queue.  
+- Peek : it returns the value of the first element in the queue.  
+- IsEmpty : it returns a boolean telling us if the queue is empty or not.
