@@ -9,7 +9,12 @@ public class PseudoQueueTest{
     public void testEnqueue() {
         PseudoQueue pseudoQueue = new PseudoQueue();
         pseudoQueue.enqueue(15);
+        pseudoQueue.enqueue("Rawzi");
+        pseudoQueue.enqueue('D');
         assertTrue(pseudoQueue.first.peek() != null);
+        assertEquals(15 , pseudoQueue.dequeue());
+        assertEquals("Rawzi" , pseudoQueue.dequeue());
+        assertEquals('D', pseudoQueue.dequeue());
     }
 
     @Test
