@@ -3,6 +3,7 @@ package tree;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+
 public class MaximumValueTest{
     @Test
     public void testFindMaximumValue() {
@@ -18,5 +19,4 @@ public class MaximumValueTest{
         MaximumValue.root.right.right.left = new Node(4);
         assertEquals(17, MaximumValue.findMax(MaximumValue.root));
     }
-
 }

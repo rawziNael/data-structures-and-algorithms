@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a223341-a589-48e1-a669-cde7c13b5144" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/linked/list/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/linked/list/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/linked/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/linked/list/LinkedList.java" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/linked/list/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/linked/list/Node.java" afterDir="false" />
-
-
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/linked/list/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linked/list/LinkedListTest.java" afterDir="false" />
+    <list default="true" id="d9c4bb90-c88c-4381-8b3f-66195b4e99a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/data-structures-and-algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/data-structures-and-algorithms.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -47,31 +41,28 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26228w2rnk1uDgr9h9M1tcygHjL" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="278x6xZCK6bCMCYr3msc0KJgkvq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="linked.list" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tree" />
     </key>
   </component>
-
-  <component name="RunManager" selected="Gradle.LinkedListTest.testInsertLinkedList">
-    <configuration name="LinkedListTest.testIncludes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-
-  <component name="RunManager" selected="Gradle.LinkedListTest.testMerge">
-    <configuration name="LinkedListTest.testGetKFromEnd (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-
+  <component name="RunManager" selected="Gradle.MaximumValueTest">
+    <configuration name="BinarySearchTreeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -82,9 +73,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
+            <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testIncludes&quot;" />
+            <option value="&quot;tree.BinarySearchTreeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -94,7 +85,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LinkedListTest.testIncludesNotExists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BinaryTreeTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -105,9 +96,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
+            <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testIncludesNotExists&quot;" />
+            <option value="&quot;tree.BinaryTreeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -117,7 +108,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LinkedListTest.testInsertLinkedList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BinaryTreeTest.testInOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -128,9 +119,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
+            <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testInsertLinkedList&quot;" />
+            <option value="&quot;tree.BinaryTreeTest.testInOrder&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -140,7 +131,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LinkedListTest.testInstantiateAnEmptyLinkedList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BinaryTreeTest.testPreOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -151,9 +142,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
+            <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testInstantiateAnEmptyLinkedList&quot;" />
+            <option value="&quot;tree.BinaryTreeTest.testPreOrder&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -163,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LinkedListTest.testInstantiateLinkedList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MaximumValueTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -174,55 +165,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
+            <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testInstantiateLinkedList&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkedListTest.testMerge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testMerge&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkedListTest.testZipLinkedList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;linked.list.LinkedListTest.testZipLinkedList&quot;" />
+            <option value="&quot;tree.MaximumValueTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -234,43 +179,43 @@
     </configuration>
     <recent_temporary>
       <list>
-
-        <item itemvalue="Gradle.LinkedListTest.testInsertLinkedList" />
-        <item itemvalue="Gradle.LinkedListTest.testInstantiateAnEmptyLinkedList" />
-        <item itemvalue="Gradle.LinkedListTest.testIncludesNotExists" />
-        <item itemvalue="Gradle.LinkedListTest.testIncludes" />
-        <item itemvalue="Gradle.LinkedListTest.testInstantiateLinkedList" />
-
-        <item itemvalue="Gradle.LinkedListTest.testMerge" />
-        <item itemvalue="Gradle.LinkedListTest.testZipLinkedList" />
-        <item itemvalue="Gradle.LinkedListTest.testGetKFromEnd (1)" />
-
+        <item itemvalue="Gradle.MaximumValueTest" />
+        <item itemvalue="Gradle.BinarySearchTreeTest" />
+        <item itemvalue="Gradle.BinaryTreeTest (1)" />
+        <item itemvalue="Gradle.BinaryTreeTest.testPreOrder" />
+        <item itemvalue="Gradle.BinaryTreeTest.testInOrder" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7a223341-a589-48e1-a669-cde7c13b5144" name="Changes" comment="" />
-      <created>1646607219968</created>
+      <changelist id="d9c4bb90-c88c-4381-8b3f-66195b4e99a4" name="Changes" comment="" />
+      <created>1648715355168</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646607219968</updated>
+      <updated>1648715355168</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/java/tree/BinarySearchTree.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lib/src/test/java/tree/BinarySearchTreeTest.java</url>
+          <line>8</line>
+          <properties class="tree.BinarySearchTreeTest" method="testAdd">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

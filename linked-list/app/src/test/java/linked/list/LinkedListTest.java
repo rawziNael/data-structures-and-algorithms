@@ -1,59 +1,121 @@
 package linked.list;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
-    @Test public void testInstantiateLinkedList() {
+
+    // Code Challenge: Class 05 - Linked List Implementation
+    @Test void  testInstantiateAnEmptyLinkedList(){
+        LinkedList linkedList = new LinkedList();
+    }
+    @Test public void testInsertLinkedList() {
         LinkedList first = new LinkedList();
         first.insert(100);
         first.insert(99);
         first.insert(98);
-        first.insert(97);
-        first.insert(96);
-        first.insert(95);
-        first.insert(94);
+        assertEquals(100, first.head.next.next.value);
 
-        assertTrue(first.includes(100));
-        assertFalse(first.includes(92));
     }
-    @Test public void testIncludes() {
+    @Test public void testIncludesExists() {
         LinkedList second = new LinkedList();
         second.insert(9);
         second.insert(7);
         second.insert(5);
 
-        assertTrue(second.includes(6));
-    }
-    @Test public void testAppendLinkedList() {
-        LinkedList ap = new LinkedList();
-        ap.insert(100);
-        ap.insert(99);
-        ap.append(50);
-
-        String output = "{99} -> {100} -> {50} -> NULL";
-        assertEquals(output, ap.toString());
+        assertTrue(second.includes(7));
     }
 
+    @Test public void testIncludesNotExists() {
+        LinkedList third = new LinkedList();
+        third.insert(9);
+        third.insert(7);
+        third.insert(5);
 
-    @Test public void testInsertBeforeLinkedList() {
-        LinkedList before = new LinkedList();
-        before.insert(100);
-        before.insert(98);
-        before.insert(96);
-        before.insertBefore(99, 50);
-
-        String output = "{96} -> {97} -> {98} -> {50} -> {99} -> {100} -> NULL";
-        assertEquals(output, before.toString());
+        assertFalse(third.includes(10));
     }
 
-    @Test public void testInsertAfterLinkedList() {
-        LinkedList after = new LinkedList();
-        after.insert(99);
-        after.insert(97);
-        after.insertAfter(97, 50);
+    //Code Challenge: Class 06- Extend a Linked List to allow various insertion methods.
+    @Test void testAppend() {
+        LinkedList linkedList= new LinkedList();
+        linkedList.insert(21);
+        linkedList.insert(16);
+        linkedList.insert(35);
+        linkedList.append(12);
 
-        String output = "{96} -> {97} -> {50} -> {98} -> {99} -> {100} -> NULL";
-        assertEquals(output, after.toString());
+        //linkedlist length
+        Node current = linkedList.head;
+        int size = 0;
+        while (current != null) {
+            size++;
+            current = current.next;
+        }
+        assertTrue(linkedList.includes(16));
+        assertEquals(4, size);
+        assertEquals(12, linkedList.head.next.next.next.value);
+    }
+
+    @Test
+    void testInsertBeforeFirstNode (){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert(1);
+        linkedList.insert(2);
+        linkedList.insert(3);
+        linkedList.insertBefore(3,4);
+
+        String expected =  "{4} -> {3} -> {2} -> {1} -> NULL";
+        String actual = linkedList.toString();
+
+        assertEquals(expected,actual);
+    }
+    @Test
+    void testInsertAfterMiddle () {
+        LinkedList linkedList = new LinkedList();
+
+        linkedList.insert(4);
+        linkedList.insert(8);
+        linkedList.insert(10);
+        linkedList.insertAfter(8, 6);
+        String expected = "{10} -> {8} -> {6} -> {4} -> NULL";
+        String actual = linkedList.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testInsertBeforeEnd(){
+        LinkedList linkedList = new LinkedList();
+
+        linkedList.insert(4);
+        linkedList.insert(8);
+        linkedList.insert(10);
+        linkedList.insertBefore(4,6);
+        String expected = "{10} -> {8} -> {6} -> {4} -> NULL";
+        String actual = linkedList.toString();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testInsertAfter() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert(13);
+        linkedList.insert(7);
+        linkedList.insert(4);
+        linkedList.insertAfter(4, 11);
+
+        // linkedlist length
+        Node current = linkedList.head;
+        int size = 0;
+        while (current != null) {
+            size++;
+            current = current.next;
+        }
+        assertTrue(linkedList.includes(11));
+        assertEquals(4, size);
+        assertEquals(11 , linkedList.head.next.value);
     }
 
     // Code Challenge: Class 07 - (k-th value from the end of a linked list).
