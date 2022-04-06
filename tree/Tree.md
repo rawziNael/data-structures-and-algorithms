@@ -19,4 +19,3 @@ In this class challenge I used the following methods:
 - postOrder()	  
 
 #### BinarySearchTree  
-- contains()
