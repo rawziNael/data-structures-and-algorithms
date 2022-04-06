@@ -10,7 +10,6 @@ public class FizzBuzzTree{
         return tree;
     }
 
-
     public static Node recursive(Node node) {
         if (node == null) {
             return null;
@@ -22,7 +21,6 @@ public class FizzBuzzTree{
         recursive(node.right);
         return node;
     }
-
 
     public static void fizzBuzz(Node node) {
         if ((int) node.value % 3 == 0 && (int) node.value % 5 == 0) {
