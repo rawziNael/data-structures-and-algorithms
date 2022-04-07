@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c4bb90-c88c-4381-8b3f-66195b4e99a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/data-structures-and-algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/data-structures-and-algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/tree/MaximumValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/tree/MaximumValue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

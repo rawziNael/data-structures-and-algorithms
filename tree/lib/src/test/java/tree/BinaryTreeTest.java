@@ -1,8 +1,6 @@
 package tree;
 
 import static org.junit.Assert.*;
-
-import org.junit.Before;
 import org.junit.Test;
 
 public class BinaryTreeTest{
@@ -17,7 +15,7 @@ public class BinaryTreeTest{
         binaryTree.root.right = new Node(100);
         binaryTree.root.left.left = new Node(3);
         binaryTree.root.left.right = new Node(18);
-        binaryTree.root.right.left = new Node (5);
+        binaryTree.root.right.left = new Node(5);
     }
 
     @Test
