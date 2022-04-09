@@ -53,4 +53,33 @@ public class BinaryTree<T>{
         }
         return list;
     }
+
+    public Queue<T> breadthFirst() {
+
+        Queue<Node<T>> tempRoot = new Queue<>();
+
+        Queue<T> root = new Queue<>();
+
+        Node<T> current = this.getRoot();
+
+        if (current != null) {
+            tempRoot.enqueue(this.getRoot());
+        }
+
+        while (!tempRoot.isEmpty()) {
+
+            current = tempRoot.dequeue();
+            root.enqueue(current.getData());
+
+            if (current.getLeft() != null) {
+                tempRoot.enqueue(current.getLeft());
+            }
+
+            if (current.getRight() != null) {
+                tempRoot.enqueue(current.getRight());
+            }
+        }
+
+        return root;
+    }
 }
