@@ -1,10 +1,13 @@
 package tree;
 
 import java.util.ArrayList;
+
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.List;
 
-public class BinaryTree<T extends Comparable<T>>{
+public class BinaryTree<T> {
+
     Node<T> root;
 
     ArrayList<T> array =new ArrayList<>();
@@ -65,6 +68,7 @@ public class BinaryTree<T extends Comparable<T>>{
         }
         return list;
     }
+
 
 
     //Code Challenge17

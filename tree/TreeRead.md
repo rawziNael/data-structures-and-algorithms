@@ -2,7 +2,7 @@
 In this tutorial I learned Binary Trees and Binary Search Trees.
 
 #### Some common terminology in this class  
-- Node - A Tree node is a component which may contain its own values, and references to other nodes
+- tree Node - A Tree node is a component which may contain its own values, and references to other nodes
 - Root - The root is the node at the beginning of the tree
 - Left - A reference to one child node, in a binary tree
 - Right - A reference to the other child node, in a binary tree  

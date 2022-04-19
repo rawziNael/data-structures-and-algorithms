@@ -2,16 +2,19 @@ package linked.list;
 
 public class LinkedList {
         public Node head;
+
         public LinkedList() {
 
-        };
+
+        }
+
 
    // Code Challenge: Class 05: Linked List Implementation
 
    public void insert(int val) {
-            Node newNode = new Node(val);
-            newNode.next = head;
-            head = newNode;
+            Node node = new Node(val);
+            node.next = head;
+            head = node;
    }
 
    public boolean includes(int target) {
@@ -42,34 +45,52 @@ public class LinkedList {
 
     //Code Challenge: Class 06 - Extend a Linked List to allow various insertion methods.
 
-    public void append(int val) {
-        Node newNode = new Node(val);
-        Node runner = head;
-        while (runner.next != null) {
-            runner = runner.next;
+    public void append(int value) {
+        Node current = this.head;
+        while (current != null) {
+            if (current.next == null) {
+                Node newNode = new Node(value);
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
         }
-        runner.next = newNode;
     }
 
-    public void insertBefore(int target, int val) {
-        Node newNode = new Node(val);
-        Node runner = head;
-        while (runner.next.value != target) {
-            runner = runner.next;
+    public void insertBefore(int value, int newValue) {
+        if (this.head.value == value) {
+            this.insert(newValue);
+            return;
+        } else if (!this.includes(value)) {
+            return;
         }
-        newNode.next = runner.next;
-        runner.next = newNode;
+
+        Node current = this.head;
+        while (current != null) {
+            if (current.next.value == value) {
+                Node newNode = new Node(newValue);
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
     }
 
-    public void insertAfter(int target, int val) {
-        Node newNode = new Node(val);
-        Node runner = head;
-        while (runner.value != target) {
-            runner = runner.next;
+    public void insertAfter(int value, int newValue) {
+        if (!this.includes(value)) {
+            return;
         }
-        newNode.next = runner.next;
-        runner.next = newNode;
-
+        Node current = this.head;
+        while (current != null) {
+            if (current.value == value) {
+                Node newNode = new Node(newValue);
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
     }
 
     //Code Challenge: Class 07 - (k-th value from the end of a linked list).
