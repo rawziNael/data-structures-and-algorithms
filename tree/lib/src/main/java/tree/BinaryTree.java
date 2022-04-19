@@ -1,16 +1,30 @@
 package tree;
 
 import java.util.ArrayList;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.List;
 
 public class BinaryTree<T> {
+
     Node<T> root;
+
+    ArrayList<T> array =new ArrayList<>();
 
     public BinaryTree() {
     }
 
     public BinaryTree(Node<T> node) {
         this.root = node;
+    }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
     }
 
     public ArrayList<T> preOrder() {
@@ -55,7 +69,28 @@ public class BinaryTree<T> {
         return list;
     }
 
-    //*********************************************class17****************************************
 
 
+    //Code Challenge17
+
+    public ArrayList<T> breadthFirst(Node <T> root) {
+        Queue<T> queue = new PriorityQueue<T>();
+        if(root == null)
+            throw  new IllegalStateException("is empty");
+        queue.add((T) root);
+        array.add(root.value);
+        Node node;
+        while(!queue.isEmpty()){
+            node = (Node) queue.poll();
+            if(node.getLeft() != null) {
+                queue.add((T) node.getLeft());
+                array.add((T) node.getLeft().getValue());
+            }
+            if(node.getRight() != null) {
+                queue.add((T) node.getRight());
+                array.add((T) node.getRight().getValue());
+            }
+        }
+        return array;
+    }
 }

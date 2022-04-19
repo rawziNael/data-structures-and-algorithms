@@ -3,6 +3,8 @@ package tree;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class BinaryTreeTest{
 
     @Test
@@ -42,5 +44,95 @@ public class BinaryTreeTest{
         binaryTree.root.right = new Node(6);
         binaryTree.root.right.left = new Node(5);
         binaryTree.root.right.right = new Node(3);
+    }
+
+    //test 17
+
+    @Test
+    public void breadthTreeTest(){
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        try{
+            binaryTree.breadthFirst(binaryTree.getRoot());
+        }catch (Exception e )
+        {
+            System.err.println("it's empty");
+        }
+    }
+
+    @Test
+    public void breadthTreeTest1(){
+
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        binaryTree.setRoot(new Node<>(15));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        assertEquals(binaryTree.breadthFirst(binaryTree.getRoot()),arr);
+    }
+
+    @Test
+    public void breadthTreeTest2() {
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        binaryTree.setRoot(new Node<>(15));
+        binaryTree.getRoot().setLeft(new Node<>(7));
+        binaryTree.getRoot().setRight( new Node<>(5));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        assertEquals(binaryTree.breadthFirst(binaryTree.getRoot()),arr);
+    }
+
+    @Test
+    public void breadthTreeTest3(){
+
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        binaryTree.setRoot(new Node<>(2));
+        binaryTree.getRoot().setLeft(new Node<>(7));
+        binaryTree.getRoot().setRight( new Node<>(5));
+        binaryTree.getRoot().getLeft().setLeft(new Node<>(2));
+        binaryTree.getRoot().getLeft().setRight(new Node<>(6));
+        binaryTree.getRoot().getRight().setRight(new Node<>(9));
+
+        binaryTree.getRoot().getLeft().getRight().setLeft(new Node<>(5));
+        binaryTree.getRoot().getLeft().getRight().setRight(new Node<>(11));
+        binaryTree.getRoot().getRight().getRight().setLeft(new Node<>(4));
+        ArrayList arr = new ArrayList();
+        arr.add(2);
+        arr.add(7);
+        arr.add(5);
+        arr.add(2);
+        arr.add(6);arr.add(9);arr.add(5);arr.add(11);arr.add(4);
+        assertEquals(binaryTree.breadthFirst(binaryTree.getRoot()),arr);
+    }
+
+    @Test
+    public void breadthTreeTest4(){
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        binaryTree.setRoot(new Node<>(15));
+        binaryTree.getRoot().setLeft(new Node<>(7));
+        binaryTree.getRoot().getLeft().setLeft( new Node<>(5));
+        binaryTree.getRoot().getLeft().getLeft().setLeft(new Node<>(3));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        arr.add(3);
+        assertEquals(binaryTree.breadthFirst(binaryTree.getRoot()),arr);
+    }
+
+    @Test
+    public void breadthTreeTest5 () {
+
+        BinaryTree <Integer> binaryTree = new BinaryTree<>();
+        binaryTree.setRoot(new Node<>(15));
+        binaryTree.getRoot().setRight(new Node<>(7));
+        binaryTree.getRoot().getRight().setRight( new Node<>(5));
+        binaryTree.getRoot().getRight().getRight().setRight(new Node<>(3));
+        ArrayList arr = new ArrayList();
+        arr.add(15);
+        arr.add(7);
+        arr.add(5);
+        arr.add(3);
+        assertEquals(binaryTree.breadthFirst(binaryTree.getRoot()),arr);
     }
 }

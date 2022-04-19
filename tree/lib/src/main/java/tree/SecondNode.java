@@ -1,6 +1,6 @@
 package tree;
 
-public class SecondNode {
+public class SecondNode<T> {
     public int value;
     public SecondNode left;
     public SecondNode right;

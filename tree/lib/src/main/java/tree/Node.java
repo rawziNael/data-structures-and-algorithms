@@ -16,24 +16,36 @@ public class Node <T> {
             this.right = right;
         }
 
-        public void setValue(T value) {
-            this.value = value;
-        }
+    public void setValue(T value) {
+        this.value = value;
+    }
 
-        public void setLeft(Node<T> left) {
-            this.left = left;
-        }
+    public void setLeft(Node<T> left) {
+        this.left = left;
+    }
 
-        public void setRight(Node<T> right) {
-            this.right = right;
-        }
+    public void setRight(Node<T> right) {
+        this.right = right;
+    }
 
-        @Override
-        public String toString() {
-            return "tree.Node{" +
-                    "value=" + value +
-                    ", left=" + left +
-                    ", right=" + right +
-                    '}';
-        }
+    public T getValue() {
+        return value;
+    }
+
+    public Node<T> getLeft() {
+        return left;
+    }
+
+    public Node<T> getRight() {
+        return right;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }
