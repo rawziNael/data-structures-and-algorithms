@@ -28,6 +28,18 @@ public class Node<T> {
         this.right = right;
     }
 
+    public T getValue() {
+        return value;
+    }
+
+    public Node<T> getLeft() {
+        return left;
+    }
+
+    public Node<T> getRight() {
+        return right;
+    }
+
     @Override
     public String toString() {
         return "Node{" +

@@ -1,15 +1,27 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
-public class BinaryTree<T>{
+public class BinaryTree<T extends Comparable<T>>{
     Node<T> root;
+
+    ArrayList<T> array =new ArrayList<>();
 
     public BinaryTree() {
     }
 
     public BinaryTree(Node<T> node) {
         this.root = node;
+    }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
     }
 
     public ArrayList<T> preOrder() {
@@ -54,32 +66,27 @@ public class BinaryTree<T>{
         return list;
     }
 
-    public Queue<T> breadthFirst() {
 
-        Queue<Node<T>> tempRoot = new Queue<>();
+    //Code Challenge17
 
-        Queue<T> root = new Queue<>();
-
-        Node<T> current = this.getRoot();
-
-        if (current != null) {
-            tempRoot.enqueue(this.getRoot());
-        }
-
-        while (!tempRoot.isEmpty()) {
-
-            current = tempRoot.dequeue();
-            root.enqueue(current.getData());
-
-            if (current.getLeft() != null) {
-                tempRoot.enqueue(current.getLeft());
+    public ArrayList<T> breadthFirst(Node <T> root) {
+        Queue<T> queue = new PriorityQueue<T>();
+        if(root == null)
+            throw  new IllegalStateException("is empty");
+        queue.add((T) root);
+        array.add(root.value);
+        Node node;
+        while(!queue.isEmpty()){
+            node = (Node) queue.poll();
+            if(node.getLeft() != null) {
+                queue.add((T) node.getLeft());
+                array.add((T) node.getLeft().getValue());
             }
-
-            if (current.getRight() != null) {
-                tempRoot.enqueue(current.getRight());
+            if(node.getRight() != null) {
+                queue.add((T) node.getRight());
+                array.add((T) node.getRight().getValue());
             }
         }
-
-        return root;
+        return array;
     }
 }
