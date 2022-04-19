@@ -16,5 +16,5 @@ Used a queue to keep track of the nodes, storing a node's left and right after d
 - Time: O(n)  
 
 # WhiteBoard  
-![Code challenge](tree/assets/Code Challenge17.png)  
+![Code challenge](tree/assets/Code_Challenge17.png)  
 
