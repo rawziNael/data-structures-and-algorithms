@@ -19,4 +19,5 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge16 |Find the Maximum Value in a Binary Tree | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/tree/Read16.md)|
 | Challenge17 |Breadth-first Traversal | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/tree/Read17.md)|
 | Challenge18 |FizzBuzz | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/tree/Read18.md)|
+| Challenge26 |Insertion Sort | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/sort/Readme.md)|
 
