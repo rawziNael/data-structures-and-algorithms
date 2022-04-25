@@ -1,12 +1,13 @@
 package tree;
 
+
 import static org.junit.Assert.*;
 import org.junit.Test;
-
 
 public class MaximumValueTest{
     @Test
     public void testFindMaximumValue() {
+
         MaximumValue.root = new Node(9);
         MaximumValue.root.left = new Node(12);
         MaximumValue.root.right = new Node(5);

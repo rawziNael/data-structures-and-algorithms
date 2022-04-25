@@ -1,6 +1,6 @@
 package tree;
 
-public class Node<T> {
+public class Node <T> {
 
         public T value;
         public Node<T> left;
@@ -26,6 +26,18 @@ public class Node<T> {
 
     public void setRight(Node<T> right) {
         this.right = right;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public Node<T> getLeft() {
+        return left;
+    }
+
+    public Node<T> getRight() {
+        return right;
     }
 
     @Override
