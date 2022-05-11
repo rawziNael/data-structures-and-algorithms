@@ -1,4 +1,4 @@
-# Merge Sort
+# Quick Sort
 Quick Sort is a sorting algorithm that divides an array into divisions in a recursive manner based on the outcome of 
 sorting the current partition by a pivot point. The array is partitioned and sorted until it is in sorted order throughout.  
 
