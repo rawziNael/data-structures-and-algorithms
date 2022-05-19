@@ -22,5 +22,6 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge26 |Insertion Sort | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/sort/Readme.md)|
 | Challenge27 |Merge Sort | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/quicksort/sort/Read27.md)|
 | Challenge28 |Quick Sort | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/quicksort/sort/Read28.md)|
+| Challenge30 |Hash Tables | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/hashtable/Read30.md)|
 
 
