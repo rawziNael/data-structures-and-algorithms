@@ -3,6 +3,7 @@ package hashtable.structure;
 import hashtable.data.HashNode;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class HashMap<K , V> {
@@ -67,7 +68,7 @@ public class HashMap<K , V> {
             for (int index = 0; index < numBucket; index++) {
                 bucketArray.add(null);
             }
-            for (int i = 0; i <= temp.size(); i++) {
+            for (int i = 0; i < temp.size(); i++) {
                 HashNode<K ,V> headNode = temp.get(i);
                 while (headNode != null) {
                     add(headNode.getKey(), headNode.getValue());
@@ -95,5 +96,17 @@ public class HashMap<K , V> {
 
     public boolean contains(K key) {
         return get(key) != null;
+    }
+
+    public ArrayList<K> keys() {
+        ArrayList<K> arrOfKeys = new ArrayList<>();
+        for (int i = 0; i < bucketArray.size(); i++) {
+            HashNode<K, V> head = bucketArray.get(i);
+            while(head != null){
+                arrOfKeys.add(head.getKey());
+                head = head.getNext();
+            }
+        }
+        return arrOfKeys;
     }
 }
