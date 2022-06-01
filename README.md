@@ -24,6 +24,10 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge28 |Quick Sort | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/quicksort/sort/Read28.md)|
 | Challenge30 |Hash Tables | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/hashtable/Read30.md)|
 | Challenge31 |first repeated word | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/hashtable/Read31.md)|
+| Challenge32 || [link]()|
+| Challenge33 |Hashmap LEFT JOIN | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/hashtable/Read33.md)|
+| Challenge35 |Graphs | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/graph/graph/Read35.md)|
+
 
 
 
