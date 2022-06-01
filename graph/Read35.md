@@ -29,8 +29,6 @@ for its neighbors.
 - GetNeighbors(): Returns a list of edges that are linked to the specified node. Takes in a certain node. Include the connection's weight in 
   the returned collection.  
 
-# WhiteBoard  
-
 
 
 
