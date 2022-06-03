@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Graph{
 
-    private Map<Vertex, LinkedList<Vertex>> adjVertices;
-    private long size;
+    private Map<Vertex, List<Vertex>> adjVertices;
+    private int size;
 
     public Graph() {
-        adjVertices = new HashMap<>();
+        this.adjVertices = new HashMap<>();
     }
 
     public long getSize() {
@@ -17,17 +17,21 @@ public class Graph{
 
     public Vertex addNode(String value) {
         Vertex vertex = new Vertex(value);
-        adjVertices.put(vertex, new LinkedList<>());
+        adjVertices.put(vertex, new ArrayList<>());
         size++;
         return vertex;
     }
 
-    public void addEdge(String firstNode, String secondValue) {
-        if (!adjVertices.containsKey(firstNode) || !adjVertices.containsKey(secondValue)) {
-            return;
-        }
-        adjVertices.get(firstNode).add(new Vertex(secondValue));
-        adjVertices.get(secondValue).add(new Vertex(firstNode));
+    public void addEdge(String value1, String value2) {
+//        if (!adjVertices.containsKey(value1) && !adjVertices.containsKey(value2)) {
+//            return;
+//        }
+
+        Vertex vertex1 = new Vertex(value1);
+        Vertex vertex2 = new Vertex(value2);
+
+        adjVertices.get(vertex1).add(vertex2);
+        adjVertices.get(vertex2).add(vertex1);
     }
 
     public void addEdge(String firstNode, String secondValue, int weight){
@@ -38,11 +42,11 @@ public class Graph{
         adjVertices.get(secondValue).add(new Vertex(firstNode, weight));
     }
 
-    public LinkedList<Vertex> getNeighbors(String value) {
-        if (!adjVertices.containsKey(value)) {
-            return null;
-        }
-        return adjVertices.get(value);
+    public List<Vertex> getNeighbors(String value) {
+//        if (!adjVertices.containsKey(value)) {
+//            return null;
+//        }
+        return adjVertices.get(new Vertex(value));
     }
 
     public Set<Vertex> getAdjVertices() {
@@ -58,5 +62,25 @@ public class Graph{
             strBuilder.append(adjVertices.get(vertex));
         }
         return strBuilder.toString();
+    }
+
+    // ******************************************** Challenge 36 *******************************************************
+
+    public Set<String> bFT(String root){
+        Set<String> nods = new LinkedHashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            String s = queue.poll();
+            List<Vertex> vertexNeighbours = getNeighbors(String.valueOf(s));
+            if(vertexNeighbours != null) {
+                for (Vertex vertex : vertexNeighbours) {
+                    if (!nods.contains(vertex.getValue()))
+                            queue.add(vertex.getValue());
+                }
+            }
+            nods.add(s);
+        }
+        return nods;
     }
 }
