@@ -4,7 +4,10 @@
 package graph;
 
 import org.junit.jupiter.api.Test;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -70,4 +73,50 @@ class AppTest {
         Graph graph = new Graph();
         assertEquals(graph.getNodes(),null);
     }
+
+    @Test void testBFT1(){
+        Graph graph = new Graph();
+
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+
+        graph.addEdge("A","B");
+        graph.addEdge("A","C");
+        graph.addEdge("B","C");
+        graph.addEdge("B","D");
+
+
+        Set<String> bfs = graph.bFT("A");
+        Set<String> arr = new HashSet<>();
+        arr.add("A");
+        arr.add("B");
+        arr.add("C");
+        arr.add("D");
+
+        assertEquals(arr,bfs);
+    }
+
+    @Test void testBFT2() {
+        Graph graph = new Graph();
+
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Naboo");
+
+        graph.addEdge("Pandora", "Arendelle");
+        graph.addEdge("Arendelle", "Metroville");
+        graph.addEdge("Naboo", "Metroville");
+
+        Set<String> stringSet = graph.bFT("Pandora");
+        Set<String> strings = new HashSet<>();
+        strings.add("Pandora");
+        strings.add("Arendelle");
+        strings.add("Metroville");
+        strings.add("Naboo");
+        assertEquals(strings,stringSet);
+    }
+
 }
