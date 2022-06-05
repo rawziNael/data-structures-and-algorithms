@@ -28,6 +28,6 @@ This repository is dedicated for problem solving - Java Advanced course
 | Challenge33 |Hashmap LEFT JOIN | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/main/hashtable/Read33.md)|
 | Challenge35 |Graphs | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/graph/graph/Read35.md)|
 | Challenge36 |Breadth First Traversal  | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/graph-breadth-first/graph/Read36.md)|
-
+| Challenge37 |Business Trip | [link](https://github.com/rawziNael/data-structures-and-algorithms/blob/graph-business-trip/graph/Read37.md)|
 
 
