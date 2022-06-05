@@ -34,12 +34,16 @@ public class Graph{
         adjVertices.get(vertex2).add(vertex1);
     }
 
-    public void addEdge(String firstNode, String secondValue, int weight){
-        if (!adjVertices.containsKey(firstNode) || !adjVertices.containsKey(secondValue)) {
-            return;
-        }
-        adjVertices.get(firstNode).add(new Vertex(secondValue, weight));
-        adjVertices.get(secondValue).add(new Vertex(firstNode, weight));
+    public void addEdge(String value1, String value2, int weight){
+//        if (!adjVertices.containsKey(firstNode) || !adjVertices.containsKey(secondValue)) {
+//            return;
+//        }
+
+        Vertex vertex1 = new Vertex(value1, weight);
+        Vertex vertex2 = new Vertex(value2, weight);
+
+        adjVertices.get(vertex1).add(vertex2);
+        adjVertices.get(vertex2).add(vertex1);
     }
 
     public List<Vertex> getNeighbors(String value) {
@@ -82,5 +86,20 @@ public class Graph{
             nods.add(s);
         }
         return nods;
+    }
+
+    // ******************************************** Challenge 37 *******************************************************
+
+
+    public int businessTrip(Graph graph, String[] cities) {
+        int cost = 0;
+        for (int i = 0; i < cities.length- 1; i++) {
+            for (Vertex vertex : graph.getNeighbors(cities[i])) {
+                if (Objects.equals(cities[i+1], vertex.getValue())) {
+                    cost += vertex.getWeight();
+                }
+            }
+        }
+        return cost;
     }
 }

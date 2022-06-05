@@ -119,4 +119,50 @@ class AppTest {
         assertEquals(strings,stringSet);
     }
 
+    @Test
+    public void testBusinessTrip1(){
+
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+
+        graph.addEdge("A", "B", 5);
+        graph.addEdge("C", "D", 10);
+        graph.addEdge("A", "D", 12);
+
+        String[] arr = {"A","D"};
+        assertEquals(graph.businessTrip(graph, arr),12);
+    }
+
+    @Test
+    public void testBusinessTrip2() {
+        Graph testGraph = new Graph();
+        testGraph.addNode("Metroville");
+        testGraph.addNode("Pandora");
+        testGraph.addNode("Arendelle");
+        testGraph.addNode("Naboo");
+        testGraph.addNode("New Monstropolis");
+
+        testGraph.addEdge("Metroville", "Pandora", 25);
+        testGraph.addEdge("Metroville", "New Monstropolis", 15);
+        testGraph.addEdge("Pandora", "Arendelle", 25);
+        testGraph.addEdge("Pandora", "Naboo", 15);
+        testGraph.addEdge("Arendelle", "Naboo", 15);
+
+        String[] testArray1 = {"Metroville", "Pandora", "Arendelle"};
+        String[] testArray2 = {"New Monstropolis", "Metroville", "Pandora", "Arendelle", "Naboo"};
+        String[] testArray3 = {"Pandora", "New Monstropolis"};
+        String[] testArray4 = {"Arendelle", "Naboo", "Metroville"};
+        String[] testArray5 = {""};
+        String[] testArray6 = {};
+
+        assertEquals(50 , testGraph.businessTrip(testGraph, testArray1));
+        assertEquals(80, testGraph.businessTrip(testGraph, testArray2));
+        assertEquals(0, testGraph.businessTrip(testGraph, testArray3));
+        assertEquals(15, testGraph.businessTrip(testGraph, testArray4));
+        assertEquals(0, testGraph.businessTrip(testGraph, testArray5));
+        assertEquals(0, testGraph.businessTrip(testGraph, testArray6));
+    }
 }
