@@ -102,4 +102,24 @@ public class Graph{
         }
         return cost;
     }
+
+    // ******************************************** Challenge 38 *******************************************************
+
+    public List<String> depthFirst(Vertex vertex) {
+
+        List<String> visited = new ArrayList<>();
+        Stack<String> stack = new Stack<>();
+        stack.add(vertex.getValue());
+
+        while (!stack.isEmpty()) {
+            String str = stack.pop();
+            if (!visited.contains(str)) {
+                visited.add(str);
+                for (Vertex v : getNeighbors(str)) {
+                    stack.add(v.getValue());
+                }
+            }
+        }
+        return visited;
+    }
 }
