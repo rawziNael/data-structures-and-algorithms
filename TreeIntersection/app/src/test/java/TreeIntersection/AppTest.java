@@ -3,19 +3,17 @@
  */
 package TreeIntersection;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import static org.junit.Assert.assertEquals;
 
-public class AppTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    @Test
-    public void test1() {
-        TreeIntersection treeIntersection = new TreeIntersection();
+class AppTest {
 
+    @Test void test1() {
+        TreeIntersection treeIntersection=new TreeIntersection();
         BinaryTree<Integer> binaryTree1=new BinaryTree<Integer>();
-
         binaryTree1.root = new Node(150);
 
         binaryTree1.root.left = new Node(100);
@@ -31,9 +29,8 @@ public class AppTest {
         binaryTree1.root.right.right.left = new Node(300);
         binaryTree1.root.right.right.right = new Node(500);
 
-        /////////////////  tree 2 //////////////////////
-        BinaryTree<Integer> binaryTree2 =new BinaryTree<Integer>();
 
+        BinaryTree<Integer> binaryTree2 =new BinaryTree<Integer>();
         binaryTree2.root = new Node(42);
         binaryTree2.root.left = new Node(100);
         binaryTree2.root.right = new Node(600);
@@ -65,10 +62,7 @@ public class AppTest {
         assertEquals(newArray, arr);
     }
 
-
-    //////////////// 2 trees has one node in intersection /////////////
-    @Test
-    public void test2() {
+    @Test void test2() {
         TreeIntersection treeIntersection=new TreeIntersection();
         BinaryTree<Integer> binaryTree1=new BinaryTree<Integer>();
         binaryTree1.root = new Node(4);
@@ -93,7 +87,7 @@ public class AppTest {
 
         assertEquals(newArray, arr);
     }
-    ////////// test if there is no common nodes in trees intersection is empty ////////////
+
     @Test void test3() {
         TreeIntersection treeIntersection=new TreeIntersection();
         BinaryTree<Integer> binaryTree1=new BinaryTree<Integer>();
@@ -112,7 +106,7 @@ public class AppTest {
         ArrayList<Integer> newArray = treeIntersection.IntersectionTwoTrees(binaryTree1, binaryTree2);
         assertEquals(newArray, arr);
     }
-    ////////// test if all nodes of tree1 the same as all nodes of tree2 ////////////
+
     @Test void test4() {
         TreeIntersection treeIntersection=new TreeIntersection();
         BinaryTree<Integer> binaryTree1=new BinaryTree<Integer>();
@@ -135,9 +129,7 @@ public class AppTest {
         assertEquals(newArray, arr);
     }
 
-    ////////// test if two trees are empty ////////////
-    @Test
-    public void test5() {
+    @Test void test5() {
         TreeIntersection treeIntersection=new TreeIntersection();
         BinaryTree<Integer> binaryTree1=new BinaryTree<Integer>();
         BinaryTree<Integer> binaryTree2 =new BinaryTree<Integer>();
