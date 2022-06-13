@@ -2,16 +2,20 @@ package hashtable;
 
 import hashtable.structure.HashMap;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LeftJoin{
 
-    public static HashMap<String, String[]> leftJoin(HashMap<String, String> first, HashMap<String, String> second) {
-        HashMap<String, String[]> result = new HashMap<>();
-        for (String key : first.keys()) {
-            String[] str = new String[2];
-            str[0] = first.get(key);
-            str[1] = second.contains(key) ? second.get(key) : null;
-            result.add(key, str);
+    public static List<String> leftJoin(HashMap first , HashMap second) {
+        List<String> list = new ArrayList<>();
+        for(Object key : first.keys()){
+            if(first.contains(key)){
+                list.add(" [ " + key +  " , " + first.get(key)+ " , " + second.get(key)+ " ]  ");
+            } else{
+                list.add(" [ " + key + " , " + first.get(key) + " , " + null + " ]  ");
+            }
         }
-        return result;
+        return list;
     }
 }
