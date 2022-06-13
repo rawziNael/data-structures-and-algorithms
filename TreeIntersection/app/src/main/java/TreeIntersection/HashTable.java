@@ -3,7 +3,7 @@ package TreeIntersection;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class HashTable<K ,V> {
+public class HashTable<K , V> {
 
     private ArrayList<HashNode<K, V>> bucketArray;
     private int buckets;
@@ -39,7 +39,7 @@ public class HashTable<K ,V> {
 
         HashNode<K, V> newNode = new HashNode<>(key, value, hashcode);
 
-        if(head == null) {
+        if (head == null) {
             bucketArray.set(index, newNode);
             size++;
         } else {
@@ -78,7 +78,6 @@ public class HashTable<K ,V> {
         return null;
     }
 
-    // Returns: Boolean, indicating if the key exists in the table already.
     public boolean contains(K key) {
         int index = hash(key);
         int hashcode = hashCode(key);
@@ -105,7 +104,6 @@ public class HashTable<K ,V> {
         }
         return arrOfKeys;
     }
-
 
     int hash(K key) {
         int hashCode = hashCode(key);

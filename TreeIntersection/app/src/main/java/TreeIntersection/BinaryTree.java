@@ -1,12 +1,11 @@
 package TreeIntersection;
-
 import java.util.ArrayList;
 
-public class BinaryTree<T extends Comparable<T>> {
+public class BinaryTree<T extends Comparable<T>>{
 
     public Node<T> root;
-    ArrayList<T> arrOfPre =new ArrayList<>();
-    ArrayList<T> arrOfIn =new ArrayList<>();
+    ArrayList<T> arr1 =new ArrayList<>();
+    ArrayList<T> arr2 =new ArrayList<>();
 
     public BinaryTree() {
     }
@@ -20,10 +19,10 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
 
-    public ArrayList<T> preOrder(Node<T> root){
+    public ArrayList<T> preOrder(Node <T> root){
         if(root == null)
-            return  arrOfPre;
-        arrOfPre.add(root.value);
+            return arr1;
+        arr1.add(root.value);
         if(root.getLeft() !=null){
             preOrder(root.getLeft());
         }
@@ -31,21 +30,21 @@ public class BinaryTree<T extends Comparable<T>> {
             preOrder(root.getRight());
         }
 
-        return arrOfPre;
+        return arr1;
     }
-    public ArrayList<T> InOrder(Node<T> root){
+    public ArrayList<T> InOrder(Node <T> root){
         if(root == null)
-            return  arrOfIn;
+            return arr2;
         if(root.getLeft() !=null){
             InOrder(root.getLeft());
         }
-        arrOfIn.add(root.value);
+        arr2.add(root.value);
 
         if(root.getRight()!=null){
             InOrder(root.getRight());
         }
 
-        return arrOfIn;
+        return arr2;
     }
 
     @Override

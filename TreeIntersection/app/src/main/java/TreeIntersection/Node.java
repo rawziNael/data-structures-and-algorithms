@@ -1,7 +1,6 @@
 package TreeIntersection;
 
 public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
-
     public T value;
     public Node left;
     public Node right;

@@ -4,11 +4,11 @@
 package TreeIntersection;
 
 public class App {
-    public boolean someLibraryMethod() {
-        return true;
+    public String getGreeting() {
+        return "Hello World!";
     }
 
     public static void main(String[] args) {
-
+        System.out.println(new App().getGreeting());
     }
 }
